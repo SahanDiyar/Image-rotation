@@ -1,0 +1,65 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Rotator</title>
+    <style>
+        /* CSS goes here */
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            background-color: #f4f4f4;
+            text-align: center;
+        }
+
+        .container {
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        p {
+            color: #666;
+            margin-bottom: 20px;
+        }
+
+        #rotatingImage {
+            width: 300px; /* Adjust as needed */
+            height: auto;
+            cursor: pointer;
+            transition: transform 0.5s ease-in-out; /* Smooth transition for rotation */
+        }
+
+        .rotated {
+            transform: rotate(180deg);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Good Morning</h1>
+        <p>Start your day with positive energy and happy thoughts.</p>
+        <img src="Good morning.webp" alt="Good Morning Coffee" id="rotatingImage">
+    </div>
+
+    <script>
+        /* JavaScript goes here */
+        document.addEventListener('DOMContentLoaded', function() {
+            const rotatingImage = document.getElementById('rotatingImage');
+
+            rotatingImage.addEventListener('click', function() {
+                this.classList.toggle('rotated');
+            });
+        });
+    </script>
+</body>
+</html>
